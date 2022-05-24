@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+:root{
+    --font: 'Roboto Slab', serif;
+    --borda: 1px solid rgba(0, 0, 0, 0.534);
+}
+
+*{
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-weight: 300;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.096);
+}
+
+.content{
+    width: 50rem; 
+    padding: 20px;
+    margin-bottom: 12%;
+    margin-top: 12%;
+    border-radius: 10px;
+
+    background: rgba(18, 18, 18, 0.259);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.info{
+    font-size: 19px;
+    display: flex;
+    gap: 20px;
+}
+
+.titulo-principal{
+    font-size: 100px;
+    font-family: 'Satisfy', cursive;
+}
+
+.conteudo-texto-pao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80px;
+    padding: 10px;
+}
+
+.marcador-flipper{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform .6s;
+    position: relative;
+    top: 1.5em;
+    
+}
+
+.marcador:hover .marcador-flipper{
+    transform: rotateY(180deg);
+}
+
+.back, .front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back{
+	transform: rotateY(180deg);
+}
+
+.carrinho-js{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+    font-size: 22px;
+}
+
+.num-quantidade{
+    padding: 5px 9px 5px 9px; 
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    border-radius: 0;
+}
+
+.back > img{
+    width: 38px;
+}
+.front > img{
+    width: 38px;
+}
+
+.main{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 2% auto auto auto;
+}
+
+header{
+    width: 100%;
+    background: url(img/bread.jpg) no-repeat center 0 fixed;
+    background-size: 100%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cardapio{
+    width: 50%;
+    border: var(--borda);
+}
+
+#produtos{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+}
+
+.pao{
+    background-color: rgba(255, 255, 255, 0.116);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    width: 25%;
+    height: 14em;
+    box-shadow: 2px 3px 8px #00000075;;
+}
+
+.marcador{
+    width: 30px;
+    height: 30px;   
+    perspective: 1000px;
+    margin: .5em auto;
+    border-radius: 100%;
+}
+
+.pao >img{
+    width: 100%;
+}
+
+.pao > p{
+    margin: 10px;
+    font-size: 16px;
+}
+
+.preco{
+    color: rgb(41, 209, 63);
+}
+
+.imagem-carrinho-conteudo{
+    width: 20%;
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
+.carrinho{
+    width: 30%;
+    padding: 20px;
+    border: var(--borda);
+}
+
+.header-carrinho{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    float: left;
+
+    font-size: 15px;
+    font-family: var(--font);
+}
+
+.header-carrinho > img{
+    width: 10%;
+}
+
+.footer-carrinho{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    font-size: 14px;
+    font-family: var(--font);
+}
+
+.texto-footer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    font-size: 14px;
+    font-family: var(--font);
+    align-items: center;
+}
+
+.button-comprar{
+    background-color: #8d0000;
+    width: 80%;
+    height: 3em;
+    margin-left: 10%;
+    left: 0;
+    right: 0;
+    display: block;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .content{
+        width: 80%;
+    }
+    .titulo-principal{
+        font-size: 55px;
+    }
+    .info{
+        font-size: 15px;
+    }
+    .cardapio{
+        width: 70%;
+        margin-right: 30px;
+    }
+    .pao{
+        height: 14em;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .content{
+        width: 70%;
+    }
+    .titulo-principal{
+        font-size: 55px;
+    }
+    .info{
+        font-size: 15px;
+    }
+    .cardapio{
+        width: 70%;
+        margin-right: 30px;
+    }
+    .pao{
+        height: 14em;
+        width: 40%;
+    }
+}
