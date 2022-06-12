@@ -23,7 +23,7 @@ body{
 }
 
 .content{
-    width: 50rem; 
+    width: 52rem; 
     padding: 20px;
     margin-bottom: 12%;
     margin-top: 12%;
@@ -39,6 +39,7 @@ body{
 }
 
 .info{
+    align-items: center;
     font-size: 19px;
     display: flex;
     gap: 20px;
@@ -266,4 +267,15 @@ header{
         height: 14em;
         width: 40%;
     }
+}
+
+.statusLoja1{
+    color: #fff !important;
+}
+
+.status{
+    background: red;
+    width: 17px;
+    height: 17px;
+    border-radius: 100%;
 }

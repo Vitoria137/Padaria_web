@@ -1,4 +1,34 @@
-    
+//Horário
+
+$(document).ready(function() {
+
+    atualizaAtendimento();
+  
+    setInterval(atualizaAtendimento, 60000);
+  
+  });
+  
+  function atualizaAtendimento() {
+    var Agora = new Date().getHours();
+  
+    statusLoja1(Agora);
+  
+  }
+  
+  function statusLoja1(Agora) {
+    var hrAbre = 8;
+    var hrFecha = 18;
+  
+  // Menor e não menor ou igual, pois se for 18:30 vai considerar aberto
+    if (Agora >= hrAbre && Agora < hrFecha) { 
+      $('.statusLoja1').html("Aberto");
+      $('.status').css("background", "green");
+    } else {
+      $('.statusLoja1').html("Fechado");
+      $('.status').css("background", "red");
+    }
+  }
+  
     const items = [
         //Pães
 
@@ -154,6 +184,10 @@
             subtotal: 0
         }
     ]
+
+    function somar(preco, subtotal){
+        subtotal = preco + subtotal;
+    }
     
     inicializarLoja = () => {
         var containerProdutos = document.getElementById('produtos');
